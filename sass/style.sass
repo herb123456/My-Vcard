@@ -191,6 +191,7 @@ blockquote
             +max-screen($screen-sm)
                 float: left
                 width: 100%
+                margin-left: 0
             span
                 color: #2ECC71
                 margin: 0 3px
@@ -374,6 +375,10 @@ blockquote
                         height: 0
                         width: 0
                         border-color: transparent #fff transparent transparent
+                    +max-screen($screen-sm)
+                        margin-left: 0
+                        &:after
+                            border: none
                     .timeline-content-title
                         text-align: left
                         margin: 10px 5px
@@ -386,10 +391,10 @@ blockquote
                     .timeline-content-description
                         text-align: left
                         margin: 15px 0 10px 25px
-                    +max-screen($screen-sm)
-                        margin-left: 0
-                        &:after
-                            border: none
+                        p
+                            margin: 14px 0
+                            line-height: $font-size + 8
+                    
 
 .some-quote
     background: url("../imgs/quote-bg.png") no-repeat
