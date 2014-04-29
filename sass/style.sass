@@ -20,7 +20,7 @@ section
         width: 60%
         text-align: center
         max-width: 1100px
-        +max-screen($screen-xs)
+        +max-screen($screen-sm)
             width: 85%
     .mask
         position: absolute
@@ -61,7 +61,7 @@ blockquote
     +transition(all 0.5s)
     &.in-effect
         height: 180px
-    +max-screen($screen-xs)
+    +max-screen($screen-sm)
         height: 50px
         position: fixed
     .min-button
@@ -80,7 +80,7 @@ blockquote
         +transition( top 0.5s )
         &.in-effect
             top: 130px
-        +max-screen($screen-xs)
+        +max-screen($screen-sm)
             display: inline-block
     li
         display: inline-block
@@ -113,7 +113,7 @@ blockquote
         &.in-effect
             +translateY(0)
             +opacity(1)
-        +max-screen($screen-xs)
+        +max-screen($screen-sm)
             +translateY(-300px)
             +opacity(0)
 
@@ -139,13 +139,13 @@ blockquote
             width: 45%
             text-align: center
             margin-right: 5%
-            +max-screen($screen-xs)
+            +max-screen($screen-sm)
                 // float: none
                 width: 100%
                 margin: 0 0 40px 0
             .wrapper
                 float: right
-                +max-screen($screen-xs)
+                +max-screen($screen-sm)
                     float: none
                 .head
                     margin-bottom: 20px
@@ -179,7 +179,7 @@ blockquote
                 .social-icon
                     a
                         margin: 0 5px
-                        +max-screen($screen-xs)
+                        +max-screen($screen-sm)
                             font-size: $font-size - 5px
         .intro-side
             float: right
@@ -188,7 +188,7 @@ blockquote
             text-align: left
             font-size: $font-size
             line-height: $font-size * 1.5
-            +max-screen($screen-xs)
+            +max-screen($screen-sm)
                 float: left
                 width: 100%
 
@@ -198,6 +198,11 @@ blockquote
     background-size: 100% 100%
     background-attachment: fixed
     position: relative
+    +max-screen($screen-sm)
+        // +background-image(linear-gradient(bottom, #7F8C8D 0%, #ECF0F1 50%))
+        background: #7F8C8D
+        background-repeat: repeat
+        background-size: initial
     +clearfix
     .skills-mask
         background: rgba(#ECF0F1, 0.3)
@@ -212,6 +217,8 @@ blockquote
             +transition( opacity 0.5s)
             &.in-effect
                 +opacity(1)
+            +max-screen($screen-sm)
+                color: #fff
         .skills-col1
             float: left
             width: 45%
@@ -219,7 +226,7 @@ blockquote
             +transition( transform 0.4s, opacity 0.2s)
             +translateX(-200px)
             +opacity(0)
-            +max-screen($screen-xs)
+            +max-screen($screen-sm)
                 width: 100%
         .skills-col2
             float: right
@@ -228,7 +235,7 @@ blockquote
             +transition( transform 0.4s, opacity 0.2s)
             +translateX(200px)
             +opacity(0)
-            +max-screen($screen-xs)
+            +max-screen($screen-sm)
                 width: 100%
         .skills-col1, .skills-col2
             &.in-effect
@@ -264,6 +271,11 @@ blockquote
     background: url("../imgs/iuse-bg.png") no-repeat
     background-size: 100% 100%
     background-attachment: fixed
+    +max-screen($screen-sm)
+        // +background-image(linear-gradient(bottom, #95A5A6 0%, #ECF0F1 50%))
+        background: #7F8C8D
+        background-repeat: repeat
+        background-size: initial
     +clearfix
     .container
         margin: 120px auto
@@ -308,6 +320,12 @@ blockquote
                 height: 100%
                 content: ""
                 z-index: 0
+            +max-screen($screen-sm)
+                width: 100%
+                margin: 35px auto
+                &:before
+                    width: 0
+                    height: 0
             li
                 float: right
                 margin: 30px 10px 15px 50px
@@ -315,6 +333,9 @@ blockquote
                 +transition( transform 0.6s)
                 +translateX(250px)
                 +opacity(0)
+                +max-screen($screen-sm)
+                    float: left
+                    margin: 30px 0 15px
                 &.in-effect
                     +translateX(0)
                     +opacity(1)
@@ -331,6 +352,8 @@ blockquote
                     +opacity(0)
                     &.in-effect
                         +opacity(1)
+                    +max-screen($screen-sm)
+                        display: none
                 .timeline-content
                     $margin-with-line: 30px
                     background-color: #fff
@@ -360,6 +383,10 @@ blockquote
                     .timeline-content-description
                         text-align: left
                         margin: 15px 0 10px 25px
+                    +max-screen($screen-sm)
+                        margin-left: 0
+                        &:after
+                            border: none
 
 .some-quote
     background: url("../imgs/quote-bg.png") no-repeat
@@ -376,7 +403,21 @@ blockquote
         padding: 0 0 0 70px
         position: relative
         z-index: 9
+        +max-screen($screen-sm)
+            padding: 0 0 0 10px
+        blockquote
+            +max-screen($screen-sm)
+                border-left: 1px solid #e7e9ec
+                padding: 10px
+                font-size: $font-size
+                line-height: $font-size + 5
+                small
+                    font-size: $font-size - 5
+                    line-height: $font-size 
 
+section.some-quote
+    +max-screen($screen-sm)
+        display: none
 // Pinterest Style
 // .products
 //     background-color: #ECF0F1
@@ -424,15 +465,22 @@ blockquote
         width: 67%
         margin: 60px auto
         +clearfix
+        +max-screen($screen-sm)
+            width: 85%
         .prods
             margin: 50px 0 0 30px
             +clearfix
+            +max-screen($screen-sm)
+                margin-left: 0
             .prod
                 height: 350px
                 width: 250px
                 margin: 10px 15px
                 box-sizing: border-box
                 float: left
+                +max-screen($screen-sm)
+                    float: none
+                    margin: 10px auto
                 .prod-thumb
                     position: relative
                     overflow: hidden
@@ -486,11 +534,15 @@ blockquote
             color: #fff
         .social-icon
             a
-                margin: 15px 10px
+                margin: 15px 7px
+                +max-screen($screen-sm)
+                    font-size: $font-size - 5px
         .contact-form
             text-align: left
             margin: 0 auto
             width: 50%
+            +max-screen($screen-sm)
+                width: 100%
             label
                 display: block
                 margin: 10px 0
