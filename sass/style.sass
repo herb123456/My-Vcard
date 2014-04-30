@@ -199,7 +199,7 @@ blockquote
 .skills
     // background-color: #fff
     background: url("../imgs/skills-bg.png") no-repeat
-    background-size: 100% 100%
+    background-size: 100%
     background-attachment: fixed
     position: relative
     +max-screen($screen-sm)
@@ -273,16 +273,23 @@ blockquote
 .iuse
     // background-color: #16A085
     background: url("../imgs/iuse-bg.png") no-repeat
-    background-size: 100% 100%
+    background-size: 100%
     background-attachment: fixed
+    position: relative
     +max-screen($screen-sm)
         // +background-image(linear-gradient(bottom, #95A5A6 0%, #ECF0F1 50%))
-        background: #7F8C8D
+        // background: #7F8C8D
+        background: url("../imgs/grid-bg.png") repeat
+        background-attachment: fixed
         background-repeat: repeat
         background-size: initial
+        .iuse-mask
+            background-color: rgba(#7F8C8D, 0.85)
     +clearfix
     .container
         margin: 120px auto
+        position: relative
+        z-index: 9999
         +clearfix
         h2
             color: #fff
