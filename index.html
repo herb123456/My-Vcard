@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>簡歷</title>
 
 	<link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -196,8 +196,7 @@
                         </div>
                         <div class="timeline-content-description">
                             <p>這專案幾乎由我一手包辦，包括前期溝通、規劃、版面製作、資料庫規劃、後台管理界面與功能、前台除了首頁動畫外的JS、和CSS排版、Git版本控制、用bitbucket當remote repository、伺服器Raid5設定、伺服器架設（CentOS 6.5）、從Apache到Nginx+PHP-FPM、所有能優化網站速度的方法（讓YSlow的分數A，差上CDN．Google page speed分數B，因為沒有用到css sprites）、Security相關設定例如iptables、ssh、fail2ban </p>
-                            網址：<a href="http://www.buycarla.com/" target="_blank">http://www.buycarla.com</a> <br>
-                            （這會自動偵測瀏覽器語系，如果跳到英文版，可以修改瀏覽器語系為zh_TW or TW）
+                            網址：<a href="http://www.buycarla.com/" target="_blank">http://www.buycarla.com</a>
                         </div>
                     </div>
                 </li>
@@ -310,7 +309,58 @@
                 
                 <div class="prod">
                     <div class="prod-thumb">
-                        <img src="imgs/prod.jpg" alt="">
+                        <img src="site_sample/buycarla.png" alt="買車通">
+                        <div class="mask" onclick="window.open('http://www.buycarla.com')">
+                            <div class="more">
+                                <i class="fa fa-globe fa-4x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            買車通
+                        </p>
+                        <p>
+                            買車通是一個連接北美與台灣車商的交易平台，透過網站進行線上撮合配對機制，
+                            進口二手高檔轎車，並有提供改裝與代客送檢的服務。
+                        </p>
+                        <p>
+                            此專案後端使用<span>Symfony2 + Doctrine2 + MySQL</span>完成，前端雖是購買themeforest的樣板，
+                            但也經過一定客製化，並優化<span>Responsive Design</span>。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/eastdeerfarm.png" alt="全國養鹿場">
+                        <div class="mask" onClick="window.open('http://www.eastdeerfarm.com')">
+                            <div class="more">
+                                <i class="fa fa-globe fa-4x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            全國養鹿場
+                        </p>
+                        <p>
+                            一間位於花蓮的養鹿場，使用天然飼料養殖，並用無毒農業技術栽培天然飼料，
+                            可說是台灣少數採用最天然方式，養殖鹿隻的養鹿場。
+                        </p>
+                        <p>
+                            此專案因免費幫忙，所以第一次嘗試前端開發，使用<span>Twitter Bootstrap</span>當前端framework，
+                            後端則是使用<span>Symfony2 + Porpel + MySQL</span>。
+                        </p>
+                    </div>
+                    
+                </div>
+
+
+
+                <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/ict.png" alt="中小學資訊能力評量機制發展與推廣計畫">
                         <div class="mask">
                             <div class="more">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -319,10 +369,15 @@
                     </div>
                     <div class="prod-title">
                         <p>
-                            第一個作品
+                            中小學資訊能力評量機制發展與推廣計畫
                         </p>
                         <p>
-                            歷經千辛萬苦完成
+                            由學校與教育部合作的計劃，主旨在提升中小學生資訊能力，以趣味題目引導學生操作資訊軟體，
+                            並記錄學生操作過程，最後以半自動方式評分。
+                        </p>
+                        <p>
+                            此專案在當時還沒有Google Doc的時代下誕生，我負責維護線上模擬的檔案總管, Word, Excel, Powerpoint，
+                            全以<span>純Javascript</span>撰寫，並有經過類似uglifyJS的處理，在這極端惡劣的情況下，客製出專案的需求。
                         </p>
                     </div>
                     
@@ -330,21 +385,25 @@
 
                 <div class="prod">
                     <div class="prod-thumb">
-                        <img src="imgs/prod2.jpg" alt="">
-                        <div class="mask">
+                        <img src="site_sample/elearning.png" alt="蛙蛙數位學院線上學習平台">
+                        <div class="mask" onClick="window.open('http://e-learning.froghome.org/')">
                             <div class="more">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                                <i class="fa fa-globe fa-4x"></i>
                             </div>
                         </div>
                     </div>
                     <div class="prod-title">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            蛙蛙數位學院線上學習平台
+                        </p>
+                        <p>
+                            一個線上青蛙學習平台，包含猜猜我是誰及闖關測驗等學習方式，
+                            網站還提供蛙聲辨識系統。
+                        </p>
+                        <p>
+                            此平台由moodle架設，並另外撰寫學習系統與之串接，後端使用<span>PHP + MySQL</span>，
+                            並以自己寫的Class使其擁有高度彈性，中間被追加和修改數次需求，都能輕易滿足，
+                            前端則是使用<span>ExtJS</span>。
                         </p>
                     </div>
                     
@@ -352,7 +411,7 @@
 
                 <div class="prod">
                     <div class="prod-thumb">
-                        <img src="imgs/prod3.jpg" alt="">
+                        <img src="site_sample/kingmen.png" alt="金門體育會鐵人三項運動委員會">
                         <div class="mask">
                             <div class="more">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -361,12 +420,15 @@
                     </div>
                     <div class="prod-title">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            金門體育會鐵人三項運動委員會
+                        </p>
+                        <p>
+                            金門體育會鐵人三項運動委員會的介紹網站，其中包含自己規劃撰寫的購物車，
+                            最後因金費不足沒有上線。
+                        </p>
+                        <p>
+                            此專案使用<span>PHP + MySQL</span>，前端則是<span>ExtJS</span>，
+                            包含第一次撰寫購物車與購物流程等經驗。
                         </p>
                     </div>
                     
@@ -374,7 +436,7 @@
 
                 <div class="prod">
                     <div class="prod-thumb">
-                        <img src="imgs/prod4.jpg" alt="">
+                        <img src="site_sample/2009.png" alt="高雄世運會學生海報投票系統">
                         <div class="mask">
                             <div class="more">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -383,16 +445,168 @@
                     </div>
                     <div class="prod-title">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            高雄世運會學生海報投票系統
+                        </p>
+                        <p>
+                            在高雄世運舉辦前，當時為了選出最好的海報，所舉辦的投票活動，
+                            由我與視覺設計系學長一起合作完成。
+                        </p>
+                        <p>
+                            後端由<span>PHP + MySQL</span>完成，前端則是<span>ExtJS</span>。
                         </p>
                     </div>
                     
                 </div>
+
+                <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/lainan.png" alt="聯安保全">
+                        <div class="mask">
+                            <div class="more">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            合作案-聯安保全
+                        </p>
+                        <p>
+                            這是跟一家在花蓮最大的多媒體公司合作，
+                            負責的是後台管理界面與前台資料串接
+                        </p>
+
+                        <p>
+                            後台全部使用<span>ExtJS</span>的UI，簡單易用，減緩管理者的學習曲線與時間，
+                            並以<span>PHP + MySQL</span>完成資料的處理。
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/mm.png" alt="家和有線電視bb寬頻美媚選拔">
+                        <div class="mask">
+                            <div class="more">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            家和有線電視bb寬頻美媚選拔
+                        </p>
+                        <p>
+                            這是 bb 寬頻剛成立時，要徵選代言美女，
+                            並且是要在2~3周內完成，算是很趕的專案。
+                        </p>
+                        <p>
+                            算是救火的成功案例，在極短時間內，把投票系統做出來，
+                            並完成後台管理，最後還追加灌票機制(?)。
+                        </p>
+                    </div>
+                    
+                </div>
+
+                 <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/searchClass.png" alt="課程搜尋系統">
+                        <div class="mask" onclick="window.open('site_sample/searchClass/index.html')">
+                            <div class="more">
+                                <i class="fa fa-globe fa-4x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            課程搜尋系統
+                        </p>
+                        <p>
+                            學校在選課前，會提供該系統給學生查詢欲選課程的資訊，
+                            但當時的系統很難用，所以委託我重新製作。
+                        </p>
+                        <p>
+                            後端使用<span>PHP + Oracle</span>，前端則是<span>ExtJS</span>，畫面也是ExtJS的UI組成。
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/cisindex.png" alt="資訊科學系系網站">
+                        <div class="mask" onclick="window.open('site_sample/cisindex/index.html')">
+                            <div class="more">
+                                <i class="fa fa-globe fa-4x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            資訊科學系系網站
+                        </p>
+                        <p>
+                            就是一個系上介紹網站。
+                        </p>
+                        <p>
+                            選單以Swish做成的動畫，公告系統則是<span>PHP + MySQL</span>。
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/sign2.png" alt="大學課程報名系統">
+                        <div class="mask">
+                            <div class="more">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            大學課程報名系統
+                        </p>
+                        <p>
+                            這是給校外人士，報名校內課程用的系統，包含註冊系統、會員機制、報名系統等。
+                        </p>
+                        <p>
+                            我只負責後端程式設計，使用<span>PHP + MySQL</span>。
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="prod">
+                    <div class="prod-thumb">
+                        <img src="site_sample/renth.png" alt="校外租屋系統">
+                        <div class="mask">
+                            <div class="more">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-title">
+                        <p>
+                            校外租屋系統
+                        </p>
+                        <p>
+                            這算是我接的第一個案子，當時學校還在用Excel的方式公告租屋資訊。
+                        </p>
+                        <p>
+                            因為對PHP還不熟悉，算是一種嘗試性質的專案，前端用HTML+Table排版，
+                            算是非常久以前的排版方式，後端則是非常零散的PHP，並且多是Dreamweaver產生的程式碼。
+                        </p>
+                    </div>
+                    
+                </div>
+                
+
+
+                    
+                
 
             </div>
 

@@ -1,0 +1,13 @@
+$(document).ready(function() {
+	$('#a').hide().end().find('q').click(function(){
+		var answer = $('#a');
+		if(answer.is(':visible')){
+			answer.slideUp();
+		}else{
+			answer.slideDown();
+		}
+	});
+
+
+	// do something here
+});

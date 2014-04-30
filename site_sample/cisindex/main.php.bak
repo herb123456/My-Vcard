@@ -1,0 +1,196 @@
+<?php 
+if (!isset($_SESSION)) {
+  session_start();
+}
+if(isset($_POST[pass]) && md5($_POST[pass]) == "e10adc3949ba59abbe56e057f20f883e")
+{
+  $_SESSION['user'] = "admin";
+  header ("Location: ./admin/news/admin.php");
+}
+
+//資料檔案路徑
+$datafile = "news.dat";
+//讀取資料內容
+$content = file($datafile);
+//格式化資料內容
+  $j = 0;
+  $k = 0;
+for($i=0;$i<count($content);$i++)
+{
+  $temp = explode(" ",$content[$i]);
+
+  if($temp[3] == "1")
+  {
+    $newsdata[$j][title] = $temp[1];
+    $newsdata[$j][url] = $temp[2];
+	$newsdata[$j][day] = $temp[4];
+	$j++;
+  }
+  else if($temp[3] == "2")
+  {
+    $actdata[$k][title] = $temp[1];
+    $actdata[$k][url] = $temp[2];
+	$actdata[$k][day] = $temp[4];
+	$k++;
+  }
+}
+
+$newCounter = 0;
+$actCounter = 0;
+$j--;
+$k--;
+
+?>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>main</title>
+<STYLE>
+html{
+ SCROLLBAR-FACE-COLOR: #b4fcfc;
+ SCROLLBAR-HIGHLIGHT-COLOR: #d8fcfc;
+ SCROLLBAR-SHADOW-COLOR: #d8fcfc;
+ SCROLLBAR-3DLIGHT-COLOR: #d8fcfc;
+ SCROLLBAR-ARROW-COLOR: #90d8fc;
+ SCROLLBAR-TRACK-COLOR: #d8fcfc;
+ SCROLLBAR-DARKSHADOW-COLOR: #d8fcfc;
+ SCROLLBAR-BASE-COLOR: #d8fcfc
+}
+.font1 {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 10px;
+}
+
+button {
+	background-color: #FFFFFF;
+}
+
+</style>
+</STYLE>
+</head>
+
+<body background="images/mainbg.png">
+<table width="100%">
+  <tr>
+    <td width="120"><img src="images/blueicon.gif" width="20" height="17"><img src="images/main-1.png" width="80" height="20"></td>
+    <td><div align="right">
+        <script language="JavaScript">
+<!--
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0 ; i < this.length ; i++)
+this[i+1]=initArray.arguments[i] }
+var d=new initArray("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+document.write(
+"<font color=#3333CC size=2><span style=font-size:10pt;>",
+"",
+today.getYear(),
+" / ",
+today.getMonth()+1,
+" / ",
+today.getDate(),
+" --- ",d[today.getDay()+1],
+"");
+-->
+</script> 
+     <form action="" method="post" name="form1"><input name="pass" type="text" size="8">
+      
+       <input type="submit" name="login" id="button" value="登入">
+       
+     </form> </div></td>
+  </tr>
+</table>
+
+<table width="500">
+ <?php while($newCounter < count($newsdata) || $newCounter < 4){ ?> 
+ <tr>
+  
+    <td width="100"><font size="2"><?php echo $newsdata[$j][day]; ?></font></td>
+    <td><p><?php if($newsdata[$j][url] != "null"){?><a href="<?php echo $newsdata[$j][url]; ?>" target=_blank><?php }?><font color="#000066" size="2"><?php echo $newsdata[$j][title]; ?></font><?php if($newsdata[$j][url] != "null"){ echo "</a>"; }?></p>
+    </td>
+   
+  </tr>
+  <?php $newCounter++; $j--;}?>
+  
+ 
+</table>
+<p>&nbsp;</p>
+<p><img src="images/blueicon.gif" width="20" height="17"><img src="images/main-2.png" width="80" height="20"></p>
+<table width="500">
+  <?php while($actCounter < count($actdata) || $actCounter < 4){ ?>
+  <tr> 
+    <td width="100"><font size="2"><?php echo $actdata[$k][day]; ?></font></td>
+    <td><?php if($actdata[$k][url] != "null"){?><a href="<?php echo $actdata[$k][url]; ?>" target=_blank><?php }?><font color="#000066" size="2"><?php echo $actdata[$k][title]; ?></font><?php if($newsdata[$j][url] != "null"){ echo "</a>"; }?>
+    </td>
+  </tr>
+  <?php $actCounter++; $k--;}?>
+</table>
+<DIV id="waterMark" style="position:absolute;"> 
+  <table width="99%" height="100%" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td align="right" valign="middle" class="font1"><font color="#666666">BestView IE6.0 1024x768 Copyright (c) 2007 National Hualien University of Education All Rights 
+        Reserved.<br>
+        網頁維護者：Herb、Melita、小怪</font>
+	  </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
+<script language="JavaScript1.2">
+<!--
+// Watermark script by Paul Anderson, CNET Builder.com. All rights reserved.
+
+markW = 700;       // 圖檔的寬
+markH = 40;       // 圖檔的長
+markX = 100;      // percent right
+markY = 100;      // percent down
+markRefresh = 5; // milliseconds
+
+// set common object reference
+if (!document.all) document.all = document;
+if (!document.all.waterMark.style) document.all.waterMark.style = document.all.waterMark;
+
+wMark = document.all.waterMark.style;
+wMark.width = markW;
+wMark.height = markH;
+navDOM = window.innerHeight; // Nav DOM flag
+ 
+function setVals() {
+ barW = 0; // scrollbar compensation for PC Nav
+ barH = 0;
+ if (navDOM) {
+  if (document.height > innerHeight) barW = 20;
+  if (document.width > innerWidth) barH = 20;
+  } else {
+  innerWidth = document.body.clientWidth;
+  innerHeight = document.body.clientHeight;
+  }
+ posX = ((innerWidth - markW)-barW) * (markX/100);
+ posY = ((innerHeight - markH)-barH) * (markY/100);
+ }
+
+function wRefresh() {
+ wMark.left = posX + (navDOM?pageXOffset:document.body.scrollLeft);
+ wMark.top = posY + (navDOM?pageYOffset:document.body.scrollTop);
+ }
+
+function markMe() {
+ setVals();
+ window.onresize=setVals;
+ markID = setInterval ("wRefresh()",markRefresh);
+ }
+
+window.onload=markMe; // safety for Mac IE4.5
+
+//-->
+</script>
+<!---▼解除超連結的虛線框。PS:只適用 IE5.5 以上的版本▼--->
+<script language=JavaScript>
+if(document.all){
+var tags=document.all.tags("a")
+for (var i=0;i<tags.length;i++)
+tags(i).outerHTML=tags(i).outerHTML.replace(">"," hidefocus=true>")}
+</script>

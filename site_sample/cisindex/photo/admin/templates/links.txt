@@ -1,0 +1,1 @@
+<a href='http://www.wdyl.com' target='_blank'><font color='#334777'><u>www.mypage.com</u></font></a><br><a href='mailto:info@wdyl.com'><font color='#334777'><u>info@wdyl.com</u></font></a>

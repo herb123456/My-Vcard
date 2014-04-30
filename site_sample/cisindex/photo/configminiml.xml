@@ -1,0 +1,27 @@
+<config>
+	<configlowrespopup>true</configlowrespopup>
+	<configshowfolderdescriptions>false</configshowfolderdescriptions>
+	<configshowmenu>true</configshowmenu>
+	<configstartimage>load.jpg</configstartimage>
+	<configstartimagekeep>false</configstartimagekeep>
+	<configstartheading>Example config</configstartheading>
+	<configstartfx>false</configstartfx>
+	<configmenuopen>true</configmenuopen>
+	<configcontrols>false</configcontrols>
+	<configaltnav>true</configaltnav>
+	<configsubbuttons>false</configsubbuttons>
+	<configthumbstart>false</configthumbstart>
+	<configthumbindicator>true</configthumbindicator>
+	<confighideimage>true</confighideimage>
+	<configdescriptions>startopenifopen</configdescriptions>
+	<configpopmargin>0</configpopmargin>
+	<configthumbpopopen>false</configthumbpopopen>
+	<configthumbattribs>1,0,1</configthumbattribs>
+	<configpopshowdesc>true</configpopshowdesc>
+	<configmotioninit>false</configmotioninit>
+	<configmotionspeed>1</configmotionspeed>
+	<configtextcol>666666</configtextcol>
+	<configdropcol>FFFFFF</configdropcol>
+	<configthumbframe>true</configthumbframe>
+	<configserverextension>php</configserverextension>
+</config> 

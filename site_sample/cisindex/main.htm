@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>main</title>
+<STYLE>
+html{
+ SCROLLBAR-FACE-COLOR: #b4fcfc;
+ SCROLLBAR-HIGHLIGHT-COLOR: #d8fcfc;
+ SCROLLBAR-SHADOW-COLOR: #d8fcfc;
+ SCROLLBAR-3DLIGHT-COLOR: #d8fcfc;
+ SCROLLBAR-ARROW-COLOR: #90d8fc;
+ SCROLLBAR-TRACK-COLOR: #d8fcfc;
+ SCROLLBAR-DARKSHADOW-COLOR: #d8fcfc;
+ SCROLLBAR-BASE-COLOR: #d8fcfc
+}
+.font1 {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 10px;
+}
+</STYLE>
+</head>
+
+<body background="images/mainbg.png">
+<table width="100%">
+  <tr>
+    <td width="120"><img src="images/blueicon.gif" width="20" height="17"><img src="images/main-1.png" width="80" height="20"></td>
+    <td><div align="right">
+        <script language="JavaScript">
+<!--
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0 ; i < this.length ; i++)
+this[i+1]=initArray.arguments[i] }
+var d=new initArray("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+document.write(
+"<font color=#3333CC size=2><span style=font-size:10pt;>",
+"",
+today.getYear(),
+" / ",
+today.getMonth()+1,
+" / ",
+today.getDate(),
+" --- ",d[today.getDay()+1],
+"");
+-->
+</script>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="500">
+  <tr>
+    <td><font size="2">2007.07.04</font></td>
+    <td><p><a href="http://ilt.nhlue.edu.tw/" target=_blank><font color="#000066" size="2">狂賀!!本系直屬學習科技研究所畢業生考取清大、交大、成大、政大、中央、師大等博士班</font></a></p>
+    </td>
+  </tr>
+  <tr> 
+    <td><font size="2">2007.05.24</font></td>
+    <td><a href="http://210.60.46.52/cis_summer/" target=_blank><font color="#000066" size="2">資訊科學系異想世界暑期資訊營開跑</font></a></td>
+  </tr>
+  <tr> 
+    <td width="100"><font size="2">2006.02.09</font></td>
+    <td><p><font color="#000066" size="2">資訊科學系暨學習科技研究所就業率100%</font></p>    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><img src="images/blueicon.gif" width="20" height="17"><img src="images/main-2.png" width="80" height="20"></p>
+<table width="500">
+  <tr> 
+    <td width="100"><font size="2">2006.11.01</font></td>
+    <td><font color="#000066" size="2">2006TANET網際網路研討會開跑</font></td>
+  </tr>
+</table>
+<DIV id="waterMark" style="position:absolute;"> 
+  <table width="99%" height="100%" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td align="right" valign="middle" class="font1"><font color="#666666">BestView IE6.0 1024x768 Copyright (c) 2007 National Hualien University of Education All Rights 
+        Reserved.<br>
+        網頁維護者：Herb、Melita、小怪</font>
+	  </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
+<script language="JavaScript1.2">
+<!--
+// Watermark script by Paul Anderson, CNET Builder.com. All rights reserved.
+
+markW = 700;       // 圖檔的寬
+markH = 40;       // 圖檔的長
+markX = 100;      // percent right
+markY = 100;      // percent down
+markRefresh = 5; // milliseconds
+
+// set common object reference
+if (!document.all) document.all = document;
+if (!document.all.waterMark.style) document.all.waterMark.style = document.all.waterMark;
+
+wMark = document.all.waterMark.style;
+wMark.width = markW;
+wMark.height = markH;
+navDOM = window.innerHeight; // Nav DOM flag
+ 
+function setVals() {
+ barW = 0; // scrollbar compensation for PC Nav
+ barH = 0;
+ if (navDOM) {
+  if (document.height > innerHeight) barW = 20;
+  if (document.width > innerWidth) barH = 20;
+  } else {
+  innerWidth = document.body.clientWidth;
+  innerHeight = document.body.clientHeight;
+  }
+ posX = ((innerWidth - markW)-barW) * (markX/100);
+ posY = ((innerHeight - markH)-barH) * (markY/100);
+ }
+
+function wRefresh() {
+ wMark.left = posX + (navDOM?pageXOffset:document.body.scrollLeft);
+ wMark.top = posY + (navDOM?pageYOffset:document.body.scrollTop);
+ }
+
+function markMe() {
+ setVals();
+ window.onresize=setVals;
+ markID = setInterval ("wRefresh()",markRefresh);
+ }
+
+window.onload=markMe; // safety for Mac IE4.5
+
+//-->
+</script>
+<!---▼解除超連結的虛線框。PS:只適用 IE5.5 以上的版本▼--->
+<script language=JavaScript>
+if(document.all){
+var tags=document.all.tags("a")
+for (var i=0;i<tags.length;i++)
+tags(i).outerHTML=tags(i).outerHTML.replace(">"," hidefocus=true>")}
+</script>
